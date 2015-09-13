@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 var dir = require("node-dir");
-var path = require("path");
 var fs = require("fs");
 var argv = require('yargs').argv
 
@@ -30,7 +29,7 @@ function upgradeNodeVersionInFiles(version, files, callback) {
 				return;
 			}
 			console.log("upgraded package.json");
-			dir.readFiles(__dirname, {recursive: false}, function(err, content, filename, next) {
+			dir.readFiles(process.cwd(), {recursive: false}, function(err, content, filename, next) {
 				if(err) {
 					callback(err);
 					return;
