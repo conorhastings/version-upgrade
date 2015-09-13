@@ -7,5 +7,5 @@ Your node version is stored all over the place, `.nvmrc` `.node_version`, `circl
 ### Use
 
 ```
-version-upgrade --file=.nvmrc,.node-version --version=4.0.0
+version-upgrade --files=.nvmrc,.node-version --version=4.0.0
 ```
