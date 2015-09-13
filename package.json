@@ -5,7 +5,7 @@
   "main": "index.js",
   "preferGlobal": "true",
   "bin": {
-    "upgrade-version": "./index.js"
+    "version-upgrade": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
