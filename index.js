@@ -34,9 +34,8 @@ function upgradeNodeVersionInFiles(version, files, callback) {
 					callback(err);
 					return;
 				}
-				files = files || [];
 				var fileName = filename.split("/")[filename.split("/").length -1];
-				if((files.indexOf(fileName) !== -1 && fileName !== "package.json") || !files.length) {
+				if((files.indexOf(fileName) !== -1 && fileName !== "package.json") || (!files.length && content.indexOf(currentNodeVersion) !== -1)) {
 					var newNodeVersion = content.replace(currentNodeVersion, version);
 					fs.writeFile(filename, newNodeVersion, "utf-8", function(err){
 						if(err) {
@@ -52,5 +51,5 @@ function upgradeNodeVersionInFiles(version, files, callback) {
 	});
 }
 
-var files = argv.files ? argv.files.split(",") : undefined;
+var files = argv.files ? argv.files.split(",") : [];
 upgradeNodeVersionInFiles(argv.version, files); 
