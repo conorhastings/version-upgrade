@@ -1,6 +1,6 @@
 {
   "name": "version-upgrade",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "don't manually go through all of the different places your node version is stored, let this do it for you! ",
   "main": "index.js",
   "preferGlobal": "true",
