@@ -36,7 +36,7 @@ function upgradeNodeVersionInFiles(version, files, callback) {
 				}
 				files = files || [];
 				var fileName = filename.split("/")[filename.split("/").length -1];
-				if((files.indexOf(fileName) !== -1 && fileName !== "package.json") || !files) {
+				if((files.indexOf(fileName) !== -1 && fileName !== "package.json") || !files.length) {
 					var newNodeVersion = content.replace(currentNodeVersion, version);
 					fs.writeFile(filename, newNodeVersion, "utf-8", function(err){
 						if(err) {
