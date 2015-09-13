@@ -51,4 +51,5 @@ function upgradeNodeVersionInFiles(version, files, callback) {
 	});
 }
 
-upgradeNodeVersionInFiles(argv.version, argv.files.split(",")); 
+var files = argv.files ? argv.files.split(",") : undefined;
+upgradeNodeVersionInFiles(argv.version, files); 
