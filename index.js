@@ -34,6 +34,7 @@ function upgradeNodeVersionInFiles(version, files, callback) {
 					callback(err);
 					return;
 				}
+				files = files || [];
 				var fileName = filename.split("/")[filename.split("/").length -1];
 				if((files.indexOf(fileName) !== -1 && fileName !== "package.json") || !files) {
 					var newNodeVersion = content.replace(currentNodeVersion, version);
