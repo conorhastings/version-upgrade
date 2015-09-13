@@ -1,0 +1,31 @@
+{
+  "name": "version-upgrade",
+  "version": "0.0.1",
+  "description": "don't manually go through all of the different places your node version is stored, let this do it for you! ",
+  "main": "index.js",
+  "preferGlobal": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conorhastings/version-upgrade.git"
+  },
+  "keywords": [
+    "upgrade",
+    "node",
+    "version",
+    "command",
+    "line"
+  ],
+  "author": "Conor Hastings",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conorhastings/version-upgrade/issues"
+  },
+  "homepage": "https://github.com/conorhastings/version-upgrade",
+  "dependencies": {
+    "node-dir": "^0.1.9",
+    "yargs": "^3.24.0"
+  }
+}
